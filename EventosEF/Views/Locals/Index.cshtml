@@ -1,0 +1,52 @@
+﻿@model IEnumerable<EventosEF.Models.Local>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Local</h1>
+<p>
+    <a class="cor4" asp-action="Create">CRIAR NOVO LOCAL</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Endereco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Capacidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            <tr class="table-light">
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Endereco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capacidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                    <a class="cor" asp-action="Edit" asp-route-id="@item.LocalId">Editar</a> |
+                    <a class="cor" asp-action="Details" asp-route-id="@item.LocalId">Detalhes</a> |
+                    <a class ="cor" asp-action="Delete" asp-route-id="@item.LocalId">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

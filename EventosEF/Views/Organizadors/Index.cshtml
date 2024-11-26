@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EventosEF.Models.Organizador>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Organizadores</h1>
+
+<p>
+    <a class="cor4" asp-action="Create">CRIAR NOVO ORGANIZADOR</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            <tr class="table-light">
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                    <a class="cor" asp-action="Edit" asp-route-id="@item.OrganizadorId">Editar</a> |
+                    <a class="cor" asp-action="Details" asp-route-id="@item.OrganizadorId">Detalhes</a> |
+                    <a class="cor" asp-action="Delete" asp-route-id="@item.OrganizadorId">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

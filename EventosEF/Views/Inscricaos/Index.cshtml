@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EventosEF.Models.Inscricao>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Inscrição</h1>
+
+<p>
+    <a class="cor4" asp-action="Create">CRIAR NOVA INSCRIÇÃO</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DataInscricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Evento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Participantes)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            <tr class="table-light">
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInscricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Evento.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Participantes.Nome)
+            </td>
+            <td >
+                <a class="cor" asp-action="Edit" asp-route-id="@item.InscricaoId">Editar</a> |
+                <a class="cor" asp-action="Details" asp-route-id="@item.InscricaoId">Detalhes</a> |
+                <a class="cor" asp-action="Delete" asp-route-id="@item.InscricaoId">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

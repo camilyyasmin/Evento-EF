@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EventosEF.props" />
+</Project>

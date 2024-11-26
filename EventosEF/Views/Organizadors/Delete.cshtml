@@ -1,0 +1,37 @@
+﻿@model EventosEF.Models.Organizador
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Você tem certeza que quer deletar isto?</h1>
+<div>
+   
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="OrganizadorId" />
+        <input type="submit" class="cor2" value="Delete" class="btn btn-danger" /> |
+        <a class="cor1" asp-action="Index">Voltar à lista</a>
+    </form>
+</div>

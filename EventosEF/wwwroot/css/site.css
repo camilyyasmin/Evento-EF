@@ -1,0 +1,105 @@
+html {
+    font-size: 14px;
+    background-color: #f9f1f0;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+        background-color: #f9f1f0;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    background-color: #f9f1f0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    background-color: #f9f1f0;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #f9f1f0;
+}
+
+.table {
+    background-color: #f8afa6;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    color: #f8afa6;
+}
+
+.display-4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cor {
+    color: #f79489;
+    text-decoration: none;
+}
+
+.form-group {
+    color: #f8afa6;
+}
+
+.cor1 {
+    color: #f79489;
+    text-decoration: none;
+}
+
+.cor2 {
+    color: #fadcd9;
+    background: #f79489;
+    border:none;
+    border-radius: 3px;
+    width: 90px
+}
+
+h3{
+
+}
+
+.cor4 {
+    color: #bdc3cb;
+    text-decoration: none;
+    font-size: 15px;
+  
+}
+
+.cor5 {
+    color: #f79489;
+     text-decoration: none;
+}
+
+a:hover {
+    color: #d48c70;
+}
+
+.fundo-navbar {
+    background-color: #fadcd9;
+    font-family: 'Leelawadee UI';
+    font-weight: bold;
+}
+
+.text-aqua {
+   color: #f79489;
+    text-decoration: none;
+    padding: auto 0px;
+}
+
+    
+
+    .erro {
+        color: #f79489;
+    }
+
+span {
+    color: #f79489;
+    text-decoration: none;
+}
